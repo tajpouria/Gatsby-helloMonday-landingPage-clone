@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import movementResponsivePopupStyles from './movementResponsivePopup.module.scss';
 
-import examplePic from '../images/gatsby-astronaut.png';
+import gatsbyAstronaut from '../images/gatsby-astronaut.png';
 
 const MOVE_FORCE = 20;
 const ROTATE_FORCE = 5;
 
-export default function MovementResponsivePopup() {
+export default function MovementResponsivePopup({ children }) {
   const [moveX, setMoveX] = useState(0);
   const [moveY, setMoveY] = useState(0);
   const [rotateX, setRotateX] = useState(0);
@@ -22,9 +22,8 @@ export default function MovementResponsivePopup() {
     setRotateX(-(screenY / docY) * ROTATE_FORCE * 2 - ROTATE_FORCE);
     setRotateY(-(screenX / docX) * ROTATE_FORCE * 2 - ROTATE_FORCE);
   };
-
   return (
-    <img
+    <div
       onMouseMove={handleMouseMove}
       className={movementResponsivePopupStyles.movingZone}
       style={{
@@ -32,8 +31,10 @@ export default function MovementResponsivePopup() {
         // top: moveY,
         transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
       }}
-      src={examplePic}
+      src={gatsbyAstronaut}
       alt=""
-    />
+    >
+      {children}
+    </div>
   );
 }
