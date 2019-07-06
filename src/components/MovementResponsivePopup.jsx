@@ -4,7 +4,7 @@ import movementResponsivePopupStyles from './movementResponsivePopup.module.scss
 import gatsbyAstronaut from '../images/gatsby-astronaut.png';
 
 const MOVE_FORCE = 20;
-const ROTATE_FORCE = 5;
+const ROTATE_FORCE = 1.5;
 
 export default function MovementResponsivePopup({ children }) {
   const [moveX, setMoveX] = useState(0);
@@ -27,8 +27,6 @@ export default function MovementResponsivePopup({ children }) {
       onMouseMove={handleMouseMove}
       className={movementResponsivePopupStyles.movingZone}
       style={{
-        // left: moveX,
-        // top: moveY,
         transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
       }}
       src={gatsbyAstronaut}

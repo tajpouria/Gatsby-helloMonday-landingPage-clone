@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TweenLite, Expo } from 'gsap';
+import PropTypes from 'prop-types';
 
 import MovementResponsivePopup from './MovementResponsivePopup';
 import gaspTransitionsStyles from './gaspTransition.module.scss';
@@ -8,8 +9,14 @@ import pic02 from '../images/pic02.jpg';
 import pic03 from '../images/pic03.jpg';
 
 export default class GaspTransition extends Component {
+  static prototypes = {
+    children: PropTypes.array.isRequired,
+  };
+
   constructor() {
     super();
+    this.state = {};
+
     this.loaderWrap = null;
     this.loaderTween = null;
     this.toggleBtn = null;
@@ -38,30 +45,20 @@ export default class GaspTransition extends Component {
   }
 
   render() {
+    const { children } = this.props;
     return (
       <>
-        <div className={gaspTransitionsStyles.content}>
-          <MovementResponsivePopup>
-            <img alt="" src={pic01} />
-          </MovementResponsivePopup>
-        </div>
         <div ref={div => (this.loaderWrap = div)} className={gaspTransitionsStyles.loader}>
           <MovementResponsivePopup>
             <img src={pic02} alt="" />
           </MovementResponsivePopup>
         </div>
-        <div ref={div => (this.loaderWrap = div)} className={gaspTransitionsStyles.loader}>
+        <div className={gaspTransitionsStyles.content}>
           <MovementResponsivePopup>
-            <img src={pic03} alt="" />
+            <img alt="" src={pic01} />
           </MovementResponsivePopup>
         </div>
-        <button
-          type="button"
-          className={gaspTransitionsStyles.btn}
-          onClick={this.toggleLoaderHandler}
-        >
-          Toggle Loader
-        </button>
+        {children}
       </>
     );
   }
