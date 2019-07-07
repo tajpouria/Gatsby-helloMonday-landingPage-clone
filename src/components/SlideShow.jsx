@@ -24,15 +24,20 @@ export default class SlideShow extends Component {
     };
     this.nextProperty = this.nextProperty.bind(this);
     this.prevProperty = this.prevProperty.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
   componentWillMount() {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.nextProperty();
     }, 10000);
   }
 
   nextProperty() {
+    clearInterval(this.intervalId);
+    this.intervalId = setInterval(() => {
+      this.nextProperty();
+    }, 10000);
     const { properties } = this.state;
     let newIndex = this.state.property.index + 1;
     if (newIndex >= properties.length) newIndex = 0;
@@ -43,6 +48,10 @@ export default class SlideShow extends Component {
   }
 
   prevProperty() {
+    clearInterval(this.intervalId);
+    this.intervalId = setInterval(() => {
+      this.nextProperty();
+    }, 10000);
     const { properties } = this.state;
     let newIndex = this.state.property.index - 1;
     if (newIndex <= 0) newIndex = properties.length - 1;
@@ -52,7 +61,7 @@ export default class SlideShow extends Component {
     });
   }
 
-  handleMouseMove = ({ screenX, screenY }) => {
+  handleMouseMove({ screenX, screenY }) {
     const docX = window.innerHeight;
     const docY = window.innerWidth;
 
@@ -62,23 +71,19 @@ export default class SlideShow extends Component {
       rotateX: -(screenY / docY) * ROTATE_FORCE * 2 - ROTATE_FORCE,
       rotateY: -(screenX / docX) * ROTATE_FORCE * 2 - ROTATE_FORCE,
     });
-  };
+  }
 
   render() {
-    const { properties, property, yAxisQuantity, moveX, moveY, rotateX, rotateY } = this.state;
+    const {
+      properties, property, yAxisQuantity, moveX, moveY, rotateX, rotateY,
+    } = this.state;
     return (
-      <div
-        onMouseMove={evt => {
-          this.handleMouseMove(evt);
-        }}
-        onWheel={this.nextProperty}
-        className="SlideShow"
-      >
+      <div onMouseMove={this.handleMouseMove} onWheel={this.nextProperty} className="SlideShow">
         <a onClick={this.nextProperty} className="btn prev">
-          <i className="fas fa-chevron-up"></i>
+          <div className="arrow" />
         </a>
         <a onClick={this.prevProperty} className="btn next">
-          <i className="fas fa-chevron-down"></i>
+          <div className="arrow rotate" />
         </a>
         <MovementResponsivePopup moveX={moveX} moveY={moveY} rotateX={rotateX} rotateY={rotateY}>
           <div className="page">
@@ -88,7 +93,7 @@ export default class SlideShow extends Component {
                   className="cards-slider-wrapper"
                   style={{
                     transform: `translateY(-${
-                      !property ? 0 : property.index * (100 / properties.length)
+                      !property ? 0 : property.index * (500 / properties.length)
                     }%)`,
                   }}
                 >

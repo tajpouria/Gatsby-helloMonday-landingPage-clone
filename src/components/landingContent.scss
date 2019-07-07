@@ -46,50 +46,64 @@ body {
   z-index: 1000;
 } /*#DIV_1*/
 
-#DIV_2 {
-  position: absolute;
-  transform-style: flat;
-  backface-visibility: hidden;
-  transform: translate3d(0px, 0px, 0px);
-  font-size: 14px;
-  left: 52%;
-  top: 30px;
-  color: rgb(255, 255, 255);
-  opacity: 1;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: bold;
+#DIV_3 {
+  display: none;
 }
 
-#DIV_3 {
-  bottom: 8.28125px;
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  height: 0.994318px;
-  left: 74.8011px;
-  position: absolute;
-  right: -49px;
-  text-decoration: none solid rgb(153, 153, 155);
-  top: 8px;
-  width: 45px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 22.5px 0.497159px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 22.5px 0.497159px;
-  caret-color: rgb(153, 153, 155);
-  background: rgb(153, 153, 155) none repeat scroll 0% 0% / auto padding-box
-    border-box;
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  word-spacing: 2px;
-} /*#DIV_3*/
+@media only screen and (min-width: 768px) {
+  #DIV_2 {
+    position: absolute;
+    transform-style: flat;
+    backface-visibility: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    font-size: 14px;
+    left: 52%;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
+  }
+  #DIV_3 {
+    display: block;
+    box-sizing: bo rder-box;
+    color: rgb(153, 153, 155);
+    height: 0.994318px;
+    left: 74.8011px;
+    position: absolute;
+    right: -49px;
+    text-decoration: none solid rgb(153, 153, 155);
+    top: 8px;
+    width: 45px;
+    backface-visibility: hidden;
+    column-rule-color: rgb(153, 153, 155);
+    perspective-origin: 22.5px 0.497159px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 22.5px 0.497159px;
+    caret-color: rgb(153, 153, 155);
+    background: rgb(153, 153, 155) none repeat scroll 0% 0% / auto padding-box
+      border-box;
+    border: 0px none rgb(153, 153, 155);
+    font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
+    outline: rgb(153, 153, 155) none 0px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    word-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #A_5 {
+    display: none;
+  }
+  #DIV_6 {
+    display: none;
+  }
+}
 
 #A_5 {
   box-sizing: border-box;
   color: rgb(250, 250, 255);
-  display: block;
+  display: node;
   position: absolute;
   left: 3%;
   bottom: 2%;
@@ -106,14 +120,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
-} /*#A_5*/
-
+}
 #DIV_6 {
   position: absolute;
-  transform-style: flat;
-  backface-visibility: hidden;
   transform: translate3d(0px, 0px, 0px);
-  font-family: TheinhardtRegular;
   left: 52%;
   bottom: 20px;
   color: rgb(255, 255, 255);
@@ -123,64 +133,62 @@ body {
 }
 
 .dotsContainer {
-  background-color: red;
   display: flex;
   justify-content: space-around;
 }
 
 #DIV_7 {
   position: absolute;
+  bottom: 30%;
+  left: 9%;
   transform-style: flat;
   backface-visibility: hidden;
   flex-direction: row;
   transform: translate3d(0px, 0px, 0px);
-  left: 52%;
-  bottom: 70px;
-  right: 0px;
   justify-content: space-around;
-  height: 4%;
-  width: 25%;
+  height: 5%;
+  width: 35%;
   cursor: pointer;
   overflow: visible;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  border: 2px solid white;
-  border-radius: 20px;
+  border: 1.2px solid white;
+  border-radius: 25px;
   padding: 0;
   margin: 0;
 
   p {
+    position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     color: aliceblue;
+    top: 25%;
+    left: 45%;
   }
 }
 
 #SPAN_11 {
-  position: absolute;
-  top: -120%;
-  left: -100%;
-  width: 100%;
   color: rgb(255, 250, 110);
+  font-weight: bold;
   cursor: pointer;
-  font: 50px ClarendonLTStdBold;
+  font: 40px ClarendonLTStdBold;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 2px;
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  width: 75%;
 }
 
 #SPAN_20 {
-  position: absolute;
-  top: -60%;
-  left: -100%;
-  width: 105%;
-  cursor: pointer;
   color: aliceblue;
-  backface-visibility: hidden;
-  font: normal normal 400 normal 20px / 35.75px ClarendonLTStdBold;
-  margin: 30px 0px 0px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.dotsContainer {
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  width: 75%;
 }
 
 .dot,
@@ -194,8 +202,8 @@ body {
 }
 
 .dot {
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 20%;
 }
 
 .dot:before,
@@ -213,10 +221,10 @@ body {
   transition: left 0.3s ease-out;
 }
 
-.dots:hover .dot:before {
+.dotsContainer:hover .dot:before {
   right: -25px;
 }
 
-.dots:hover .dot:after {
+.dotsContainer:hover .dot:after {
   left: -25px;
 }

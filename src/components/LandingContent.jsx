@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
+import SplitText from 'react-pose-text';
 
 import flexxa_logo from '../images/Artboard 1.svg';
 import './landingContent.scss';
-import SplitText from 'react-pose-text';
 
-export default function LandingContent({ property: { title, content }, yAxisQuantity }) {
-  const [_yAxisQuantity, setYAxisQuantity] = useState(0);
-
-  useEffect(() => {
-    setYAxisQuantity(yAxisQuantity);
-  }, [yAxisQuantity]);
-
+export default function LandingContent({ property: { title, content } }) {
   const charPoses = {
-    exit: { opacity: 0, y: _yAxisQuantity },
+    exit: { opacity: 0, y: 20 },
     enter: {
       opacity: 1,
       y: 0,
@@ -35,29 +29,23 @@ export default function LandingContent({ property: { title, content }, yAxisQuan
         <img className="FlexxaLogo" src={flexxa_logo} />
         <span className="FlexxaLogo LogoDescription">UI App Maker</span>
       </Link>
+      <span id="SPAN_11">
+        <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+          {title}
+        </SplitText>
+      </span>
+      <span id="SPAN_20">
+        <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+          {content}
+        </SplitText>
+      </span>
       <div id="DIV_7">
-        <span id="SPAN_10">
-          <span id="SPAN_11">
-            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-              {title}
-            </SplitText>
-          </span>
-        </span>
-        <div id="DIV_15">
-          <div id="DIV_16" />
-        </div>
-        <span id="SPAN_20">
-          <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-            {content}
-          </SplitText>
-        </span>
         <div className="dotsContainer">
           <a href="/" className="dots" />
           <p>Read More</p>
           <div className="dot" />
         </div>
       </div>
-      <div id="DIV_21" />
     </div>
   );
 }

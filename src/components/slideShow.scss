@@ -15,25 +15,27 @@ body {
 .card {
   transition: all 0.3s linear;
   height: 100%;
-  width: 100%;
+  width: 110%;
   background-color: #f3f3f3;
 }
 
 .cards-slider-wrapper {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
+  left: -3%;
   transition: transform 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   justify-content: center;
+  height: 100%;
+  width: 110%;
+
   .card {
     opacity: 0.7;
     transition: opacity 2s linear;
-    margin: 0;
+    height: 100%;
+    width: 100%;
+
     img {
-      margin: -10px;
-      width: 100%;
       height: 100%;
+      width: 110%;
     }
   }
 }
@@ -71,17 +73,15 @@ $i: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 25px sans-serif;
-  color: rgba(0, 0, 0, 0.4);
   position: fixed;
   right: 3%;
   z-index: 1010;
   padding: 5px 15px;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  width: 46px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50px;
   backface-visibility: hidden;
-  height: 46px;
+  height: 50px;
 
   &:hover {
     background-color: #ddd;
@@ -102,5 +102,57 @@ $i: 0;
   0% {
     margin-top: -30px;
     margin-button: -30px;
+  }
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px rgb(0, 0, 0) solid;
+  border-bottom: 2px rgb(0, 0, 0) solid;
+}
+
+.arrow {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2.5px rgb(0, 0, 0) solid;
+  border-bottom: 2.5px rgb(0, 0, 0) solid;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+.rotate {
+  transform: rotate(225deg);
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
