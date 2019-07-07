@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './landingContent.scss';
+import SplitText from 'react-pose-text';
 
-export default function LandingContent() {
+export default function LandingContent({ property: { title, content }, yAxisQuantity }) {
+  const [_yAxisQuantity, setYAxisQuantity] = useState(0);
+
+  useEffect(() => {
+    setYAxisQuantity(yAxisQuantity);
+  }, [yAxisQuantity]);
+
+  const charPoses = {
+    exit: { opacity: 0, y: _yAxisQuantity },
+    enter: {
+      opacity: 1,
+      y: 0,
+      delay: 500,
+    },
+  };
+
   return (
     <div id="DIV_1">
       <div id="DIV_2">
@@ -10,23 +26,26 @@ export default function LandingContent() {
         <div id="DIV_3" />
       </div>
       <a href="mailto:hello@hellomonday.com" id="A_5">
-        hello@hellomonday.com
+        hello@flexxa.com
       </a>
       <div id="DIV_6">© Copyright 2019</div>
       <div id="DIV_7">
         <span id="SPAN_8">Case</span>
-        <span id="SPAN_9">Essential</span>
         <span id="SPAN_10">
-          <span id="SPAN_11">The Rise of a Small Giant</span>
+          <span id="SPAN_11">
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              {title}
+            </SplitText>
+          </span>
         </span>
-        <span id="SPAN_12" />
         <div id="DIV_15">
           <div id="DIV_16" />
         </div>
         <div id="DIV_19">See more</div>
         <span id="SPAN_20">
-          Essential is proof that you don’t have to be big to do something big. In fact, being big
-          can inhibit you from being innovative or conquering a market.
+          <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+            {content}
+          </SplitText>
         </span>
       </div>
       <div id="DIV_21" />

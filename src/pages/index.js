@@ -1,12 +1,7 @@
 import React from 'react';
 
-import GaspTransition from '../components/GaspTransition';
-import LandingContent from '../components/LandingContent';
+import SlideShow from '../components/SlideShow';
 
 export default function index() {
-  return (
-    <GaspTransition>
-      <LandingContent />
-    </GaspTransition>
-  );
+  return <SlideShow />;
 }
