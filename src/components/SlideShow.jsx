@@ -7,6 +7,9 @@ import './slideShow.scss';
 import Card from './Card';
 import data from './data/data';
 
+const MOVE_FORCE = 20;
+const ROTATE_FORCE = 1.6;
+
 export default class SlideShow extends Component {
   constructor(props) {
     super(props);
@@ -14,47 +17,79 @@ export default class SlideShow extends Component {
       properties: data.properties,
       property: data.properties[0],
       yAxisQuantity: 0,
+      moveX: 0,
+      moveY: 0,
+      rotateX: 0,
+      rotateY: 0,
     };
+    this.nextProperty = this.nextProperty.bind(this);
+    this.prevProperty = this.prevProperty.bind(this);
   }
 
-  nextProperty = () => {
-    const { property } = this.state;
-    if (property.index === data.properties.length - 1) return;
-    const newIndex = this.state.property.index + 1;
+  componentWillMount() {
+    setInterval(() => {
+      this.nextProperty();
+    }, 10000);
+  }
+
+  nextProperty() {
+    const { properties } = this.state;
+    let newIndex = this.state.property.index + 1;
+    if (newIndex >= properties.length) newIndex = 0;
     this.setState({
       property: data.properties[newIndex],
       yAxisQuantity: -20,
     });
-  };
+  }
 
-  prevProperty = () => {
-    const { property } = this.state;
-    if (property.index === 0) return;
-    const newIndex = this.state.property.index - 1;
+  prevProperty() {
+    const { properties } = this.state;
+    let newIndex = this.state.property.index - 1;
+    if (newIndex <= 0) newIndex = properties.length - 1;
     this.setState({
-      property: data.properties[newIndex],
+      property: properties[newIndex],
       yAxisQuantity: 20,
+    });
+  }
+
+  handleMouseMove = ({ screenX, screenY }) => {
+    const docX = window.innerHeight;
+    const docY = window.innerWidth;
+
+    this.setState({
+      moveX: ((screenX - docX / 2) / (docX / 2)) * 2 - MOVE_FORCE,
+      moveY: ((screenY - docY / 2) / (docY / 2)) * 2 - MOVE_FORCE,
+      rotateX: -(screenY / docY) * ROTATE_FORCE * 2 - ROTATE_FORCE,
+      rotateY: -(screenX / docX) * ROTATE_FORCE * 2 - ROTATE_FORCE,
     });
   };
 
   render() {
-    const { properties, property, yAxisQuantity } = this.state;
+    const { properties, property, yAxisQuantity, moveX, moveY, rotateX, rotateY } = this.state;
     return (
-      <div onWheel={() => this.nextProperty()} className="SlideShow">
-        <a onClick={() => this.nextProperty()} className="btn prev">
+      <div
+        onMouseMove={evt => {
+          this.handleMouseMove(evt);
+        }}
+        onWheel={this.nextProperty}
+        className="SlideShow"
+      >
+        <a onClick={this.nextProperty} className="btn prev">
           <i className="fas fa-chevron-up"></i>
         </a>
-        <a onClick={() => this.prevProperty()} className="btn next">
+        <a onClick={this.prevProperty} className="btn next">
           <i className="fas fa-chevron-down"></i>
         </a>
-        <MovementResponsivePopup>
+        <MovementResponsivePopup moveX={moveX} moveY={moveY} rotateX={rotateX} rotateY={rotateY}>
           <div className="page">
             <div className="col">
-              <div className={`cards-slider active-slide-${property.index}`}>
+              <div className={`cards-slider active-slide-${!property ? 0 : property.index}`}>
                 <div
                   className="cards-slider-wrapper"
                   style={{
-                    transform: `translateY(-${property.index * (100 / properties.length)}%)`,
+                    transform: `translateY(-${
+                      !property ? 0 : property.index * (100 / properties.length)
+                    }%)`,
                   }}
                 >
                   {properties.map(property => (

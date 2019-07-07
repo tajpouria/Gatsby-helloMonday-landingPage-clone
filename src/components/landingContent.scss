@@ -10,6 +10,25 @@ body {
   justify-content: center;
 }
 
+.FlexxaLogo {
+  position: absolute;
+  top: -15%;
+  left: 2%;
+  transform: translate3d(20px, 158px, 0px);
+  cursor: pointer;
+  pointer-events: all;
+  height: 11%;
+}
+
+.LogoDescription {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 4.3%;
+  top: -7.2%;
+  font-size: 29px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 #DIV_1 {
   background-color: rgba(0, 0, 0, 0.7);
   bottom: 0px;
@@ -27,14 +46,6 @@ body {
   z-index: 1000;
 } /*#DIV_1*/
 
-#DIV_1 :after {
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_1:after*/
-
-#DIV_1 :before {
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_1:before*/
-
 #DIV_2 {
   position: absolute;
   transform-style: flat;
@@ -45,27 +56,9 @@ body {
   top: 30px;
   color: rgb(255, 255, 255);
   opacity: 1;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
 }
-
-#DIV_2:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_2:after*/
-
-#DIV_2:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_2:before*/
 
 #DIV_3 {
   bottom: 8.28125px;
@@ -89,59 +82,9 @@ body {
   border: 0px none rgb(153, 153, 155);
   font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
   outline: rgb(153, 153, 155) none 0px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  word-spacing: 2px;
 } /*#DIV_3*/
-
-#DIV_3:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_3:after*/
-
-#DIV_3:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_3:before*/
-
-#IMG_4 {
-  bottom: 827.827px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 23.9915px;
-  left: 0px;
-  pointer-events: all;
-  position: absolute;
-  right: 274.503px;
-  top: 0px;
-  width: 183.991px;
-  z-index: 999;
-  backface-visibility: hidden;
-  perspective-origin: 91.9886px 11.9886px;
-  transform: matrix(1, 0, 0, 1, 20, 158);
-  transform-origin: 91.9957px 11.9957px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_4*/
-
-#IMG_4:after {
-  cursor: pointer;
-  pointer-events: all;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_4:after*/
-
-#IMG_4:before {
-  cursor: pointer;
-  pointer-events: all;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_4:before*/
 
 #A_5 {
   box-sizing: border-box;
@@ -160,27 +103,10 @@ body {
   border: 0px none rgb(255, 255, 255);
   font: normal normal 400 normal 11px / normal TheinhardtRegular;
   outline: rgb(255, 255, 255) none 0px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 1px;
+  font-size: 12px;
 } /*#A_5*/
-
-#A_5:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#A_5:after*/
-
-#A_5:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#A_5:before*/
 
 #DIV_6 {
   position: absolute;
@@ -192,592 +118,105 @@ body {
   bottom: 20px;
   color: rgb(255, 255, 255);
   opacity: 1;
-} /*#DIV_6*/
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 1px;
+}
 
-#DIV_6:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_6:after*/
-
-#DIV_6:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_6:before*/
+.dotsContainer {
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
 
 #DIV_7 {
   position: absolute;
   transform-style: flat;
   backface-visibility: hidden;
+  flex-direction: row;
   transform: translate3d(0px, 0px, 0px);
   left: 52%;
   bottom: 70px;
   right: 0px;
-  width: auto;
-  max-width: 400px;
-  height: auto;
-  min-height: 223px;
-  margin: 0px 40px 0px 0px;
-  display: block;
+  justify-content: space-around;
+  height: 4%;
+  width: 25%;
   cursor: pointer;
   overflow: visible;
-} /*#DIV_7*/
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0;
+  margin: 0;
 
-#DIV_7:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_7:after*/
-
-#DIV_7:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_7:before*/
-
-#SPAN_8 {
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  display: block;
-  height: 17.2727px;
-  text-decoration: none solid rgb(153, 153, 155);
-  width: 180.085px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 90.0426px 8.63636px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 90.0426px 8.63636px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  margin: 0px 0px 30px;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_8*/
-
-#SPAN_8:after {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_8:after*/
-
-#SPAN_8:before {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_8:before*/
-
-#SPAN_9 {
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  display: block;
-  height: 35.4545px;
-  text-decoration: none solid rgb(255, 255, 255);
-  width: 182.074px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(255, 255, 255);
-  perspective-origin: 91.0369px 17.7273px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 91.0369px 17.7273px;
-  caret-color: rgb(255, 255, 255);
-  border: 0px none rgb(255, 255, 255);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  margin: 0px 0px 0px -2px;
-  outline: rgb(255, 255, 255) none 0px;
-  padding: 0px 0px 0px 2px;
-} /*#SPAN_9*/
-
-#SPAN_9:after {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  text-decoration: none solid rgb(255, 255, 255);
-  column-rule-color: rgb(255, 255, 255);
-  caret-color: rgb(255, 255, 255);
-  border: 0px none rgb(255, 255, 255);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(255, 255, 255) none 0px;
-} /*#SPAN_9:after*/
-
-#SPAN_9:before {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  text-decoration: none solid rgb(255, 255, 255);
-  column-rule-color: rgb(255, 255, 255);
-  caret-color: rgb(255, 255, 255);
-  border: 0px none rgb(255, 255, 255);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(255, 255, 255) none 0px;
-} /*#SPAN_9:before*/
-
-#SPAN_10 {
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  display: block;
-  height: 106.364px;
-  text-decoration: none solid rgb(153, 153, 155);
-  width: 180.085px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 90.0426px 53.1818px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 90.0426px 53.1818px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_10*/
-
-#SPAN_10:after {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_10:after*/
-
-#SPAN_10:before {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_10:before*/
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+  }
+}
 
 #SPAN_11 {
-  box-sizing: border-box;
+  position: absolute;
+  top: -120%;
+  left: -100%;
+  width: 100%;
   color: rgb(255, 250, 110);
   cursor: pointer;
-  text-decoration: none solid rgb(255, 250, 110);
-  backface-visibility: hidden;
-  column-rule-color: rgb(255, 250, 110);
-  perspective-origin: 0px 0px;
-  transform-origin: 0px 0px;
-  caret-color: rgb(255, 250, 110);
-  border: 0px none rgb(255, 250, 110);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(255, 250, 110) none 0px;
-} /*#SPAN_11*/
-
-#SPAN_11:after {
-  color: rgb(255, 250, 110);
-  cursor: pointer;
-  text-decoration: none solid rgb(255, 250, 110);
-  column-rule-color: rgb(255, 250, 110);
-  caret-color: rgb(255, 250, 110);
-  border: 0px none rgb(255, 250, 110);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(255, 250, 110) none 0px;
-} /*#SPAN_11:after*/
-
-#SPAN_11:before {
-  color: rgb(255, 250, 110);
-  cursor: pointer;
-  text-decoration: none solid rgb(255, 250, 110);
-  column-rule-color: rgb(255, 250, 110);
-  caret-color: rgb(255, 250, 110);
-  border: 0px none rgb(255, 250, 110);
-  font: normal normal 400 normal 33px / 35.75px ClarendonLTStdBold;
-  outline: rgb(255, 250, 110) none 0px;
-} /*#SPAN_11:before*/
-
-#SPAN_12 {
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 35px;
-  width: 35px;
-  backface-visibility: hidden;
-  perspective-origin: 17.5px 17.5px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 17.5px 17.5px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
-    border-box;
-  border-radius: 100% 100% 100% 100%;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-  margin: 20px 0px 0px;
-} /*#SPAN_12*/
-
-#SPAN_12:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#SPAN_12:after*/
-
-#SPAN_12:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#SPAN_12:before*/
-
-#IMG_13 {
-  bottom: 0px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 35px;
-  left: 0px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 35px;
-  backface-visibility: hidden;
-  perspective-origin: 17.5px 17.5px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 17.5px 17.5px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_13*/
-
-#IMG_13:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_13:after*/
-
-#IMG_13:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_13:before*/
-
-#IMG_14 {
-  bottom: 35px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 0px;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  right: 35px;
-  top: 0px;
-  width: 0px;
-  backface-visibility: hidden;
-  perspective-origin: 0px 0px;
-  transform-origin: 0px 0px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_14*/
-
-#IMG_14:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_14:after*/
-
-#IMG_14:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_14:before*/
-
-#DIV_15 {
-  bottom: 35px;
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 0px;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  right: 35px;
-  top: 0px;
-  width: 0px;
-  backface-visibility: hidden;
-  perspective-origin: 0px 0px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 0px 0px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_15*/
-
-#DIV_15:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_15:after*/
-
-#DIV_15:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_15:before*/
-
-#DIV_16 {
-  bottom: -35.9943px;
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 35.9943px;
-  left: 0px;
-  position: absolute;
-  right: -35.9943px;
-  top: 0px;
-  width: 35.9943px;
-  backface-visibility: hidden;
-  perspective-origin: 17.9972px 17.9972px;
-  transform-origin: 17.9972px 17.9972px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
-    border-box;
-  border-radius: 18px 18px 18px 18px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_16*/
-
-#DIV_16:after {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_16:after*/
-
-#DIV_16:before {
-  cursor: pointer;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#DIV_16:before*/
-
-#IMG_17 {
-  bottom: -15.9943px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 15.9943px;
-  left: 0px;
-  pointer-events: none;
-  position: absolute;
-  right: -17.9972px;
-  top: 0px;
-  width: 17.9972px;
-  backface-visibility: hidden;
-  perspective-origin: 8.99148px 7.99716px;
-  transform: matrix(1, 0, 0, 1, 9, 10);
-  transform-origin: 8.99858px 7.99716px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_17*/
-
-#IMG_17:after {
-  cursor: pointer;
-  pointer-events: none;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_17:after*/
-
-#IMG_17:before {
-  cursor: pointer;
-  pointer-events: none;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_17:before*/
-
-#IMG_18 {
-  bottom: -7.99716px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  height: 7.99716px;
-  left: 0px;
-  pointer-events: none;
-  position: absolute;
-  right: -7.99716px;
-  top: 0px;
-  width: 7.99716px;
-  backface-visibility: hidden;
-  perspective-origin: 3.99148px 3.99148px;
-  transform: matrix(1, 0, 0, 1, 19, 10);
-  transform-origin: 3.99858px 3.99858px;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_18*/
-
-#IMG_18:after {
-  cursor: pointer;
-  pointer-events: none;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_18:after*/
-
-#IMG_18:before {
-  cursor: pointer;
-  pointer-events: none;
-  font: normal normal 400 normal 11px / normal ClarendonLTStdBold;
-} /*#IMG_18:before*/
-
-#DIV_19 {
-  bottom: 21.3636px;
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  height: 13.6364px;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  right: -165px;
-  text-decoration: none solid rgb(153, 153, 155);
-  top: 0px;
-  width: 200px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 100px 6.81818px;
-  transform: matrix(1, 0, 0, 1, 40, 12);
-  transform-origin: 100px 6.81818px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_19*/
-
-#DIV_19:after {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_19:after*/
-
-#DIV_19:before {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_19:before*/
+  font: 50px ClarendonLTStdBold;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 2px;
+}
 
 #SPAN_20 {
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
+  position: absolute;
+  top: -60%;
+  left: -100%;
+  width: 105%;
   cursor: pointer;
-  display: block;
-  height: 103.636px;
-  text-decoration: none solid rgb(153, 153, 155);
-  width: 180.085px;
+  color: aliceblue;
   backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 90.0426px 51.8182px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 90.0426px 51.8182px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / 18px TheinhardtRegular;
+  font: normal normal 400 normal 20px / 35.75px ClarendonLTStdBold;
   margin: 30px 0px 0px;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_20*/
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-#SPAN_20:after {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / 18px TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_20:after*/
+.dotsContainer {
+}
 
-#SPAN_20:before {
-  color: rgb(153, 153, 155);
-  cursor: pointer;
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / 18px TheinhardtRegular;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#SPAN_20:before*/
-
-#DIV_21 {
-  bottom: 173.651px;
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  height: 0px;
-  left: 20px;
-  max-width: 200px;
+.dot,
+.dot:before,
+.dot:after {
   position: absolute;
-  right: 438.494px;
-  text-decoration: none solid rgb(153, 153, 155);
-  top: 678.182px;
-  width: 0px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 0px 0px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 0px 0px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_21*/
+  width: 7px;
+  height: 7px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
 
-#DIV_21:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_21:after*/
+.dot {
+  top: 50%;
+  left: 50%;
+}
 
-#DIV_21:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_21:before*/
+.dot:before,
+.dot:after {
+  content: '';
+}
 
-#DIV_22 {
-  bottom: 804.545px;
-  box-sizing: border-box;
-  color: rgb(153, 153, 155);
-  height: 17.2727px;
-  left: 238.409px;
-  max-width: 200px;
-  opacity: 0;
-  position: absolute;
-  right: 185.625px;
-  text-decoration: none solid rgb(153, 153, 155);
-  top: 30px;
-  width: 34.4602px;
-  backface-visibility: hidden;
-  column-rule-color: rgb(153, 153, 155);
-  perspective-origin: 17.2301px 8.63636px;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transform-origin: 17.2301px 8.63636px;
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_22*/
+.dot:before {
+  right: 15px;
+  transition: right 0.3s ease-out;
+}
 
-#DIV_22:after {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_22:after*/
+.dot:after {
+  left: 15px;
+  transition: left 0.3s ease-out;
+}
 
-#DIV_22:before {
-  color: rgb(153, 153, 155);
-  text-decoration: none solid rgb(153, 153, 155);
-  column-rule-color: rgb(153, 153, 155);
-  caret-color: rgb(153, 153, 155);
-  border: 0px none rgb(153, 153, 155);
-  font: normal normal 400 normal 14px / normal ClarendonLTStdBold;
-  outline: rgb(153, 153, 155) none 0px;
-} /*#DIV_22:before*/
+.dots:hover .dot:before {
+  right: -25px;
+}
+
+.dots:hover .dot:after {
+  left: -25px;
+}
