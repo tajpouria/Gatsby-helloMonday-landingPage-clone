@@ -5,7 +5,7 @@ const Card = ({ property }) => {
   const { index, picture } = property;
   return (
     <div id={`card-${index}`} className="card">
-      <img src={picture} alt={picture} />
+      <img src={require(`../images/slides/${picture}`)} alt={picture} />
     </div>
   );
 };

@@ -1,0 +1,41 @@
+.LandingPageNavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1010;
+  position: absolute;
+  top: 1.5%;
+  right: 2%;
+  height: 7%;
+  width: 32%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgb(10, 10, 10);
+  font-weight: 600;
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+.LandingPageNavBar-commerce {
+  color: rgba(219, 24, 20, 0.7);
+  border: 2px solid rgba(219, 24, 20, 0.7);
+  border-radius: 25px;
+  padding: 8px;
+  width: 28%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  .LandingPageNavBar {
+    font-size: 15px;
+  }
+  .LandingPageNavBar-commerce {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .LandingPageNavBar {
+    display: none;
+  }
+}

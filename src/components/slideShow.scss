@@ -1,17 +1,3 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.SlideShow {
-  button {
-    position: absolute;
-    left: 40px;
-    z-index: 1010;
-  }
-}
-
 .card {
   transition: all 0.3s linear;
   height: 100%;
@@ -24,11 +10,10 @@ body {
   left: -3%;
   transition: transform 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   justify-content: center;
-  height: 100%;
+  height: 105%;
   width: 110%;
-
+  bottom: -3%;
   .card {
-    opacity: 0.7;
     transition: opacity 2s linear;
     height: 100%;
     width: 100%;
@@ -44,7 +29,7 @@ $i: 0;
 @for $i from 0 through 29 {
   .cards-slider.active-slide-#{$i} #card-#{$i} {
     opacity: 1;
-    animation: flow 1s ease-in-out;
+    animation: flow 1.4s ease-in-out;
   }
 }
 
@@ -78,10 +63,17 @@ $i: 0;
   z-index: 1010;
   padding: 5px 15px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(231, 229, 229, 0.5);
   width: 50px;
   backface-visibility: hidden;
   height: 50px;
+  border: none;
+  outline: inherit;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   &:hover {
     background-color: #ddd;
@@ -99,9 +91,8 @@ $i: 0;
 }
 
 @keyframes flow {
-  0% {
-    margin-top: -30px;
-    margin-button: -30px;
+  50% {
+    margin-top: -18%;
   }
 }
 
@@ -133,7 +124,7 @@ $i: 0;
   border-top: none;
   border-right: 2.5px rgb(0, 0, 0) solid;
   border-bottom: 2.5px rgb(0, 0, 0) solid;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: arrow;
 }
@@ -144,15 +135,14 @@ $i: 0;
 
 @keyframes arrow {
   0% {
-    opacity: 0.5;
+    opacity: 0.1;
+    border-bottom: 2.5px rgba(207, 0, 0, 0.753) solid;
   }
   50% {
-    opacity: 0.5;
-  }
-  80% {
     opacity: 1;
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.1;
+    border-bottom: 2.5px rgba(207, 0, 0, 0.753) solid;
   }
 }

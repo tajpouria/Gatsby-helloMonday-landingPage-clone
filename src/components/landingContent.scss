@@ -30,7 +30,7 @@ body {
 }
 
 #DIV_1 {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.88);
   bottom: 0px;
   box-sizing: border-box;
   position: absolute;
@@ -115,11 +115,9 @@ body {
   transform-origin: 55.973px 6.81818px;
   caret-color: rgb(252, 252, 255);
   border: 0px none rgb(255, 255, 255);
-  font: normal normal 400 normal 11px / normal TheinhardtRegular;
   outline: rgb(255, 255, 255) none 0px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 #DIV_6 {
   position: absolute;
@@ -132,38 +130,29 @@ body {
   letter-spacing: 1px;
 }
 
-.dotsContainer {
-  display: flex;
-  justify-content: space-around;
-}
-
 #DIV_7 {
   position: absolute;
-  bottom: 30%;
-  left: 9%;
-  transform-style: flat;
-  backface-visibility: hidden;
+  bottom: 32%;
+  left: 7.5%;
   flex-direction: row;
   transform: translate3d(0px, 0px, 0px);
-  justify-content: space-around;
   height: 5%;
-  width: 35%;
+  width: 10%;
   cursor: pointer;
-  overflow: visible;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   border: 1.2px solid white;
   border-radius: 25px;
-  padding: 0;
-  margin: 0;
+  transition: width 500ms;
 
   p {
+    display: none;
     position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: aliceblue;
-    top: 25%;
-    left: 45%;
+    right: 5%;
+    top: 29%;
   }
 }
 
@@ -175,13 +164,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 2px;
   position: absolute;
+  width: 75%;
   top: 35%;
   left: 8%;
-  width: 75%;
 }
 
 #SPAN_20 {
   color: aliceblue;
+  line-height: 25px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -203,7 +193,7 @@ body {
 
 .dot {
   top: 40%;
-  left: 20%;
+  left: 46%;
 }
 
 .dot:before,
@@ -221,10 +211,35 @@ body {
   transition: left 0.3s ease-out;
 }
 
-.dotsContainer:hover .dot:before {
-  right: -25px;
+#DIV_7:hover {
+  width: 25%;
+  p {
+    display: block;
+  }
+  .dot:before {
+    right: -25px;
+  }
+  .dot:after {
+    left: -25px;
+  }
+  .dot {
+    left: 20%;
+  }
 }
 
-.dotsContainer:hover .dot:after {
-  left: -25px;
+@media only screen and (max-width: 975px) {
+  #SPAN_11 {
+    top: 25%;
+  }
+  #SPAN_20 {
+    top: 50%;
+  }
+
+  #DIV_7 {
+    bottom: 20%;
+    border: 0px;
+    p {
+      display: none;
+    }
+  }
 }

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import LandingContent from '../components/LandingContent';
 import MovementResponsivePopup from './MovementResponsivePopup';
+import LandingPageNavbar from './LandingPageNavbar';
 
 import './slideShow.scss';
 import Card from './Card';
-import data from './data/data';
 
 const MOVE_FORCE = 20;
 const ROTATE_FORCE = 1.6;
@@ -14,13 +14,14 @@ export default class SlideShow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      properties: data.properties,
-      property: data.properties[0],
+      properties: this.props.properties,
+      property: this.props.properties[0],
       yAxisQuantity: 0,
       moveX: 0,
       moveY: 0,
       rotateX: 0,
       rotateY: 0,
+      loading: false,
     };
     this.nextProperty = this.nextProperty.bind(this);
     this.prevProperty = this.prevProperty.bind(this);
@@ -42,9 +43,16 @@ export default class SlideShow extends Component {
     let newIndex = this.state.property.index + 1;
     if (newIndex >= properties.length) newIndex = 0;
     this.setState({
-      property: data.properties[newIndex],
+      property: properties[newIndex],
       yAxisQuantity: -20,
+      loading: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        loading: false,
+      });
+    }, 1000);
   }
 
   prevProperty() {
@@ -58,7 +66,14 @@ export default class SlideShow extends Component {
     this.setState({
       property: properties[newIndex],
       yAxisQuantity: 20,
+      loading: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        loading: false,
+      });
+    }, 1000);
   }
 
   handleMouseMove({ screenX, screenY }) {
@@ -75,16 +90,24 @@ export default class SlideShow extends Component {
 
   render() {
     const {
-      properties, property, yAxisQuantity, moveX, moveY, rotateX, rotateY,
+      properties,
+      property,
+      yAxisQuantity,
+      moveX,
+      moveY,
+      rotateX,
+      rotateY,
+      loading,
     } = this.state;
     return (
-      <div onMouseMove={this.handleMouseMove} onWheel={this.nextProperty} className="SlideShow">
-        <a onClick={this.nextProperty} className="btn prev">
+      <div onMouseMove={this.handleMouseMove} className="SlideShow">
+        <LandingPageNavbar items={['Pricing', 'Support', 'Blog', 'Features']} />
+        <button disabled={loading} type="button" onClick={this.nextProperty} className="btn prev">
           <div className="arrow" />
-        </a>
-        <a onClick={this.prevProperty} className="btn next">
+        </button>
+        <button disabled={loading} type="button" onClick={this.prevProperty} className="btn next">
           <div className="arrow rotate" />
-        </a>
+        </button>
         <MovementResponsivePopup moveX={moveX} moveY={moveY} rotateX={rotateX} rotateY={rotateY}>
           <div className="page">
             <div className="col">

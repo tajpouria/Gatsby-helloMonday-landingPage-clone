@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import movementResponsivePopupStyles from './movementResponsivePopup.module.scss';
 
 import gatsbyAstronaut from '../images/gatsby-astronaut.png';

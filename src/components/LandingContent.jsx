@@ -40,11 +40,9 @@ export default function LandingContent({ property: { title, content } }) {
         </SplitText>
       </span>
       <div id="DIV_7">
-        <div className="dotsContainer">
-          <a href="/" className="dots" />
-          <p>Read More</p>
-          <div className="dot" />
-        </div>
+        <a href="/" className="dots" />
+        <div className="dot" />
+        <p className="dotsContainer-text">Read more</p>
       </div>
     </div>
   );
