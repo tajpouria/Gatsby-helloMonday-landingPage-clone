@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import SplitText from 'react-pose-text';
+import PropTypes from 'prop-types';
 
-import flexxa_logo from '../images/Artboard 1.svg';
+import flexxaLogo from '../images/Artboard 1.svg';
 import './landingContent.scss';
 
 export default function LandingContent({ property: { title, content } }) {
@@ -26,7 +27,7 @@ export default function LandingContent({ property: { title, content } }) {
       </a>
       <div id="DIV_6">© Copyright 2019</div>
       <Link to="/">
-        <img className="FlexxaLogo" src={flexxa_logo} />
+        <img alt="flexxa" className="FlexxaLogo" src={flexxaLogo} />
         <span className="FlexxaLogo LogoDescription">UI App Maker</span>
       </Link>
       <span id="SPAN_11">
@@ -47,3 +48,7 @@ export default function LandingContent({ property: { title, content } }) {
     </div>
   );
 }
+
+LandingContent.propTypes = {
+  property: PropTypes.object.isRequired,
+};
