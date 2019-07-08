@@ -21,7 +21,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-pose": "^4.0.8",
-    "react-pose-text": "^3.1.0",
+    "react-pose-text": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
