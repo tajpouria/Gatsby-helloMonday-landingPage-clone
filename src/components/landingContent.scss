@@ -145,7 +145,8 @@ body {
   transition: width 1s;
 
   p {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
@@ -153,6 +154,8 @@ body {
     color: aliceblue;
     right: 5%;
     top: 29%;
+    transition: visibility 0s, opacity 1.5s linear;
+    display: block;
   }
 }
 
@@ -214,7 +217,8 @@ body {
 #DIV_7:hover {
   width: 25%;
   p {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .dot:before {
     right: -25px;

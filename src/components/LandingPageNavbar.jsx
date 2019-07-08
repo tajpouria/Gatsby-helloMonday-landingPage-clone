@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './landingPageNavbar.scss';
 
@@ -14,3 +15,7 @@ export default function LandingPageNavbar({ items }) {
     </div>
   );
 }
+
+LandingPageNavbar.propTypes = {
+  items: PropTypes.array.isRequired,
+};

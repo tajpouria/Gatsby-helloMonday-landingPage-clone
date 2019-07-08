@@ -8,13 +8,13 @@
 .cards-slider-wrapper {
   position: absolute;
   left: -3%;
-  transition: transform 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 1.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   justify-content: center;
   height: 105%;
   width: 110%;
   bottom: -3%;
   .card {
-    transition: opacity 2s linear;
+    transition: opacity 0.5s linear;
     height: 100%;
     width: 100%;
 
@@ -29,7 +29,7 @@ $i: 0;
 @for $i from 0 through 29 {
   .cards-slider.active-slide-#{$i} #card-#{$i} {
     opacity: 1;
-    animation: flow 1.4s ease-in-out;
+    animation: flow 1.1s ease-in-out;
   }
 }
 
@@ -92,7 +92,7 @@ $i: 0;
 
 @keyframes flow {
   50% {
-    margin-top: -18%;
+    margin-top: -11%;
   }
 }
 
@@ -122,7 +122,7 @@ $i: 0;
   margin: -10px 0 0 -10px;
   border-left: none;
   border-top: none;
-  border-right: 2.5px rgb(0, 0, 0) solid;
+  border-right: 2.5px rgb(255, 255, 255) solid;
   border-bottom: 2.5px rgb(0, 0, 0) solid;
   animation-duration: 2s;
   animation-iteration-count: infinite;

@@ -12,7 +12,6 @@ export default function LandingContent({ property: { title, content } }) {
     enter: {
       opacity: 1,
       y: 0,
-      delay: 1000,
     },
   };
 
@@ -22,7 +21,7 @@ export default function LandingContent({ property: { title, content } }) {
         What's up
         <div id="DIV_3" />
       </div>
-      <a href="mailto:hello@hellomonday.com" id="A_5">
+      <a href="mailto:hello@flexxa.com" id="A_5">
         hello@flexxa.com
       </a>
       <div id="DIV_6">© Copyright 2019</div>
